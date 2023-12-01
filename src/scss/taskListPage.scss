@@ -1,0 +1,19 @@
+// taskListPage.scss
+
+.task-card {
+  display: flex;
+  justify-content: space-around;
+  background-color: #00000065;
+  padding: 0.1rem;
+  border: none;
+  margin-top: 1rem;
+  height: auto;
+}
+
+.container {
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  height: 100%;
+}

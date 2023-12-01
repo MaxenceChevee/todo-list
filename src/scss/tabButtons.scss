@@ -1,0 +1,34 @@
+// tabButtons.scss
+
+.tab-buttons-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0;
+  padding: 0;
+  width: 10%;
+}
+
+.tab-buttons {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tab-buttons li {
+  margin-bottom: 10px;
+}
+
+.tab-buttons button {
+  width: 150px;
+  padding: 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+}
+
+.tab-buttons button:hover {
+  background-color: #45a049;
+}

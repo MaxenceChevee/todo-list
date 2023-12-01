@@ -1,0 +1,179 @@
+.all {
+  width: 100%;
+  display: grid;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-image: url("../src/assets/images/christmas-tree-2928142_1280.jpg");
+  min-height: 100vh;
+  min-width: 100vw;
+  width: 100%;
+  margin: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.task-card {
+  display: flex;
+  justify-content: space-around;
+  background-color: #00000065;
+  padding: 0.1rem;
+  border: none;
+  margin-top: 1rem;
+  height: auto;
+}
+.container {
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  height: 100%;
+}
+
+.page {
+  padding: 20px;
+}
+
+.tab-buttons-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0;
+  padding: 0;
+  width: 10%;
+}
+.input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tab-buttons {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tab-buttons li {
+  margin-bottom: 10px;
+}
+
+.tab-buttons button {
+  width: 150px;
+  padding: 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+}
+
+.tab-buttons button:hover {
+  background-color: #45a049;
+}
+
+button {
+  background-color: #00bfff !important;
+  color: white !important;
+  border: none !important;
+  padding: 10px !important;
+  margin: 5px !important;
+  cursor: pointer !important;
+}
+
+button:hover {
+  background-color: #696969 !important;
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+}
+.button-add {
+  width: 15rem;
+}
+.button-delete {
+  cursor: pointer;
+  margin-right: 2rem;
+}
+.button-validate {
+  margin: 0;
+}
+.task-item {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.checkbox {
+  margin-right: 10px;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+.form {
+  display: flex;
+  font-size: 1.2rem;
+  justify-content: center;
+  width: 100vw;
+  height: 100%;
+  color: white;
+}
+.input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #0d566e;
+  border-radius: 0.5rem;
+  height: 3rem;
+}
+
+.form label {
+  margin: 15px;
+  background-color: #00bfff;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 0.6rem;
+}
+
+.form div {
+  margin-bottom: 10px;
+}
+
+.form img {
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+}
+
+.priority-urgente {
+  color: red;
+}
+
+.priority-moyen {
+  color: orange;
+}
+
+.priority-pas-pressé {
+  color: green;
+}

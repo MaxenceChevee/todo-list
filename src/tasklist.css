@@ -1,0 +1,28 @@
+.task-list {
+  display: flex;
+  flex-direction: column;
+  font-size: large;
+  height: 300px;
+  width: 100vw;
+  color: black;
+}
+
+.task-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  padding: 8px;
+}
+
+.priority-urgente {
+  color: red;
+}
+
+.priority-moyen {
+  color: orange;
+}
+
+.priority-pas-pressé {
+  color: green;
+}

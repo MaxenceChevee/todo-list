@@ -26,19 +26,20 @@ const TaskList = ({
       {filteredTasks.map((task) => (
         <div key={task.id} className={`task-card priority-${task.priority}`}>
           <p>{task.text}</p>
-
-          {filteredPriority !== "taches accomplies" && (
-            <button
-              className="button-validate"
-              onClick={() => onValidateTask(task.id)}
-            >
-              Valider
-            </button>
-          )}
-          <RiCloseCircleLine
-            className="button-delete"
-            onClick={() => onDeleteTask(task.id)}
-          />
+          <div className="task-buttons">
+            {filteredPriority !== "taches accomplies" && (
+              <button
+                className="button-validate"
+                onClick={() => onValidateTask(task.id)}
+              >
+                ✔
+              </button>
+            )}
+            <RiCloseCircleLine
+              className="button-delete"
+              onClick={() => onDeleteTask(task.id)}
+            />
+          </div>
         </div>
       ))}
     </div>

@@ -1,6 +1,7 @@
 .all {
-  width: 100%;
   display: grid;
+  grid-template-columns: repeat(2, 1fr 4fr);
+  height: 100vh; /* Ajustez la hauteur de votre grille pour remplir l'écran */
 }
 
 body {
@@ -13,36 +14,38 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  overflow: hidden; /* Désactive le défilement global */
 }
 .task-card {
   display: flex;
-  justify-content: space-around;
+  align-items: center;
   background-color: #00000065;
-  padding: 0.1rem;
-  border: none;
-  margin-top: 1rem;
+  padding: 0.2rem;
+  border-radius: 0.4rem;
+  margin: 1rem;
   height: auto;
+  width: 90%;
+  border: 1px solid pink;
+}
+.task-content {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
 }
 .container {
   background-color: white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  overflow: hidden;
-  height: 100%;
+  overflow-y: auto; /* Ajoute un défilement interne à la tâche list */
+  max-height: 80vh; /* Hauteur maximale de la tâche list */
+  width: 50%;
+  padding: 20px;
 }
 
 .page {
   padding: 20px;
 }
 
-.tab-buttons-container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin: 0;
-  padding: 0;
-  width: 10%;
-}
 .input-container {
   display: flex;
   justify-content: center;
@@ -84,20 +87,56 @@ button {
 button:hover {
   background-color: #696969 !important;
 }
-
+.task-list-container {
+  overflow-y: auto;
+  max-height: 80vh;
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vw;
+  overflow-x: hidden; /* Désactive le défilement horizontal */
+}
 .task-list {
-  list-style: none;
   padding: 0;
+  border: 1px solid black;
+  width: 100%;
+  overflow-x: hidden; /* Désactive le défilement horizontal */
+}
+.button-container {
+  display: flex;
+  align-items: center;
+}
+.task-buttons {
+  display: flex;
+  align-items: center;
+  margin-left: auto; /* Place les boutons à l'extrême droite */
 }
 .button-add {
   width: 15rem;
 }
+.button-validate,
 .button-delete {
+  background-color: #00bfff;
+  color: white;
   cursor: pointer;
-  margin-right: 2rem;
+  width: 2rem;
+  height: 2rem;
+  margin-bottom: 0;
 }
-.button-validate {
-  margin: 0;
+.button-delete {
+  background-color: red; /* Couleur rouge pour le bouton supprimer */
+  border-radius: 0.4rem;
+}
+
+.button-validate:hover,
+.button-delete:hover {
+  background-color: #696969 !important;
 }
 .task-item {
   background-color: #fff;
@@ -108,6 +147,7 @@ button:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border: 1px solid white;
 }
 
 .checkbox {
@@ -126,7 +166,9 @@ button:hover {
   width: 100vw;
   height: 100%;
   color: white;
+  overflow: hidden; /* Désactiver le défilement */
 }
+
 .input {
   display: flex;
   flex-direction: column;
@@ -176,4 +218,23 @@ li {
 
 .priority-pas-pressé {
   color: green;
+}
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Suivi du curseur de défilement */
+::-webkit-scrollbar-thumb {
+  background-color: #00bfff;
+  border-radius: 6px;
+}
+
+/* Fond de la barre de défilement */
+::-webkit-scrollbar-track {
+  background-color: #f1f1f100;
+}
+
+/* Coin arrondi entre la barre de défilement et le contenu */
+::-webkit-scrollbar-corner {
+  background-color: #ffffff00;
 }

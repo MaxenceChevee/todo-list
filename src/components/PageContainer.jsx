@@ -13,7 +13,7 @@ function PageContainer({
   setCurrentPage,
 }) {
   return (
-    <div>
+    <div className="all">
       <TabButtons setCurrentPage={setCurrentPage} />
       <TaskPage
         currentPage={currentPage}

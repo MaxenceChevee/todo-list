@@ -85,13 +85,15 @@ function App() {
 
   return (
     <div className="App">
-      <TaskForm
-        taskInput={taskInput}
-        setTaskInput={setTaskInput}
-        selectedPriority={selectedPriority}
-        handleCheckboxChange={handleCheckboxChange}
-        addTask={addTask}
-      />
+      {currentPage === "form" && (
+        <TaskForm
+          taskInput={taskInput}
+          setTaskInput={setTaskInput}
+          selectedPriority={selectedPriority}
+          handleCheckboxChange={handleCheckboxChange}
+          addTask={addTask}
+        />
+      )}
       <PageContainer
         currentPage={currentPage}
         tasks={tasks}

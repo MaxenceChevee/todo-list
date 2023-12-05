@@ -15,21 +15,23 @@ function PageContainer({
   return (
     <div className="all">
       <TabButtons setCurrentPage={setCurrentPage} />
-      <TaskPage
-        currentPage={currentPage}
-        tasks={tasks}
-        validatedTasks={validatedTasks}
-        deleteTask={deleteTask}
-        validateTask={validateTask}
-        setSelectedPriority={setSelectedPriority}
-        setCurrentPage={setCurrentPage}
-      />
-      <CompletedTasksPage
-        currentPage={currentPage}
-        validatedTasks={validatedTasks}
-        setCurrentPage={setCurrentPage}
-        deleteTask={deleteTask}
-      />
+      <div className="task-list-container">
+        <TaskPage
+          currentPage={currentPage}
+          tasks={tasks}
+          validatedTasks={validatedTasks}
+          deleteTask={deleteTask}
+          validateTask={validateTask}
+          setSelectedPriority={setSelectedPriority}
+          setCurrentPage={setCurrentPage}
+        />
+        <CompletedTasksPage
+          currentPage={currentPage}
+          validatedTasks={validatedTasks}
+          setCurrentPage={setCurrentPage}
+          deleteTask={deleteTask}
+        />
+      </div>
     </div>
   );
 }

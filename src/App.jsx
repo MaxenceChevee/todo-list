@@ -85,24 +85,26 @@ function App() {
 
   return (
     <div className="App">
-      {currentPage === "form" && (
-        <TaskForm
-          taskInput={taskInput}
-          setTaskInput={setTaskInput}
-          selectedPriority={selectedPriority}
-          handleCheckboxChange={handleCheckboxChange}
-          addTask={addTask}
+      <main className="main">
+        {currentPage === "form" && (
+          <TaskForm
+            taskInput={taskInput}
+            setTaskInput={setTaskInput}
+            selectedPriority={selectedPriority}
+            handleCheckboxChange={handleCheckboxChange}
+            addTask={addTask}
+          />
+        )}
+        <PageContainer
+          currentPage={currentPage}
+          tasks={tasks}
+          validatedTasks={validatedTasks}
+          deleteTask={deleteTask}
+          validateTask={validateTask}
+          setSelectedPriority={setSelectedPriority}
+          setCurrentPage={setCurrentPage}
         />
-      )}
-      <PageContainer
-        currentPage={currentPage}
-        tasks={tasks}
-        validatedTasks={validatedTasks}
-        deleteTask={deleteTask}
-        validateTask={validateTask}
-        setSelectedPriority={setSelectedPriority}
-        setCurrentPage={setCurrentPage}
-      />
+      </main>
     </div>
   );
 }

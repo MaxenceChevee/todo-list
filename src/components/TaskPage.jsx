@@ -3,7 +3,7 @@ import TaskListPage from "./TaskListPage";
 
 function TaskPage({ currentPage, tasks, deleteTask, validateTask }) {
   return (
-    <div className="task-list-container">
+    <>
       {currentPage === "urgente" && (
         <TaskListPage
           tasks={tasks.filter((task) => task.priority === "urgente")}
@@ -35,7 +35,7 @@ function TaskPage({ currentPage, tasks, deleteTask, validateTask }) {
           validateTask={validateTask}
         />
       )}
-    </div>
+    </>
   );
 }
 TaskPage.propTypes = {

@@ -8,7 +8,7 @@ function TaskForm({
   addTask,
 }) {
   return (
-    <div>
+    <div className="all-form">
       <div className="form">
         <label>
           Urgente

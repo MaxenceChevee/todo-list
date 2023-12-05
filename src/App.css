@@ -7,18 +7,18 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-image: url("../src/assets/images/christmas-tree-2928142_1280.jpg");
+  background-image: url("../src/assets/images/todo.png");
   min-height: 100vh;
   margin: 0;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  overflow: hidden; /* Désactive le défilement global */
+  overflow: hidden;
 }
 .task-card {
   display: flex;
   align-items: center;
-  background-color: #00000065;
+  background-color: #000000b9;
   padding: 0.2rem;
   border-radius: 0.4rem;
   margin: 1rem;
@@ -35,8 +35,8 @@ body {
   background-color: white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  overflow-y: auto; /* Ajoute un défilement interne à la tâche list */
-  max-height: 80vh; /* Hauteur maximale de la tâche list */
+  overflow-y: auto;
+  max-height: 80vh;
   width: 50%;
   padding: 20px;
 }
@@ -50,6 +50,12 @@ body {
   justify-content: center;
   align-items: center;
 }
+.tab-buttons-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
 .tab-buttons {
   list-style: none;
   padding: 0;
@@ -59,17 +65,11 @@ body {
   justify-content: space-evenly;
 }
 
-/* .tab-buttons li {
-  margin-bottom: 4rem;
-} */
-.app {
-}
 .all-form {
   display: flex;
-  flex-direction: column;
-  width: 80%;
-  justify-content: center;
-  align-items: center;
+  width: 100vw;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 .main {
   display: flex;
@@ -82,19 +82,14 @@ body {
 .tab-buttons button {
   width: 150px;
   padding: 10px;
-  background-color: #4caf50;
   color: white;
   border: none;
   text-align: center;
   cursor: pointer;
 }
 
-.tab-buttons button:hover {
-  background-color: #45a049;
-}
-
 button {
-  background-color: #00bfff !important;
+  background-color: #99000094 !important;
   color: white !important;
   border: none !important;
   padding: 10px !important;
@@ -103,7 +98,7 @@ button {
 }
 
 button:hover {
-  background-color: #696969 !important;
+  background-color: #696969a6 !important;
 }
 .task-list-container {
   overflow-x: auto;
@@ -126,17 +121,13 @@ button:hover {
   display: flex;
   align-items: center;
 }
-/* .task-buttons {
-  display: flex;
-  align-items: center;
-  margin-left: auto; }  */
 
 .button-add {
   width: 15rem;
 }
 .button-validate,
 .button-delete {
-  background-color: #00bfff;
+  background-color: #05990094;
   color: white;
   cursor: pointer;
   width: 2rem;
@@ -144,13 +135,16 @@ button:hover {
   margin-bottom: 0;
 }
 .button-delete {
-  background-color: red; /* Couleur rouge pour le bouton supprimer */
+  background-color: #99000094;
   border-radius: 0.4rem;
 }
 
 .button-validate:hover,
 .button-delete:hover {
   background-color: #696969 !important;
+}
+.button-validate {
+  background-color: #05990094;
 }
 .task-item {
   background-color: #fff;
@@ -175,12 +169,13 @@ button:hover {
 
 .form {
   display: flex;
-  font-size: 1.2rem;
   justify-content: center;
-  width: 100vw;
+  align-items: center;
+  font-size: 1.2rem;
   height: 100%;
   color: white;
-  overflow: hidden; /* Désactiver le défilement */
+  margin-top: 8rem;
+  margin-right: 30rem;
 }
 
 .input {
@@ -188,14 +183,16 @@ button:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #0d566e;
+  background-color: #99000094;
   border-radius: 0.5rem;
   height: 3rem;
+  color: rgb(255, 255, 255) !important;
+  width: 100%;
 }
 
 .form label {
   margin: 15px;
-  background-color: #00bfff;
+  background-color: #99000094;
   cursor: pointer;
   padding: 10px;
   border-radius: 0.6rem;
@@ -237,18 +234,30 @@ li {
   width: 12px;
 }
 
-/* Suivi du curseur de défilement */
 ::-webkit-scrollbar-thumb {
   background-color: #00bfff;
   border-radius: 6px;
 }
 
-/* Fond de la barre de défilement */
 ::-webkit-scrollbar-track {
   background-color: #f1f1f100;
 }
 
-/* Coin arrondi entre la barre de défilement et le contenu */
 ::-webkit-scrollbar-corner {
   background-color: #ffffff00;
+}
+.footer {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #99000094;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.2);
+}
+.form-page .task-list-container {
+  display: none;
+  width: 1px !important;
 }

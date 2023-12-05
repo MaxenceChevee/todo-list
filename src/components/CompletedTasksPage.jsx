@@ -40,7 +40,7 @@ CompletedTasksPage.propTypes = {
     })
   ).isRequired,
   deleteTask: PropTypes.func.isRequired,
-  validateTask: PropTypes.func.isRequired, // Ajout de la prop validateTask
+  validateTask: PropTypes.func.isRequired,
 };
 
 export default CompletedTasksPage;

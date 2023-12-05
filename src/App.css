@@ -261,3 +261,27 @@ li {
   display: none;
   width: 1px !important;
 }
+/* Ajoutez ces styles à votre fichier CSS */
+@keyframes santaAnimation {
+  100% {
+    transform: translateX(-100%);
+  }
+  0% {
+    transform: translateX(100%);
+  }
+}
+
+.santa-container {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  animation: santaAnimation 20s linear infinite;
+}
+
+.santa {
+  width: 1300px;
+  height: 100px;
+  background: url("../src/assets/images/traineau-noel.gif") no-repeat center
+    center;
+  background-size: contain;
+}

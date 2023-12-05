@@ -109,6 +109,9 @@ function App() {
             setCurrentPage={setCurrentPage}
           />
         )}
+        <div className="santa-container">
+          <div className="santa"></div>
+        </div>
         <Footer />
       </main>
     </div>

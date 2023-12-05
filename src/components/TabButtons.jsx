@@ -36,7 +36,10 @@ function TabButtons({ setCurrentPage }) {
     </div>
   );
 }
+
 TabButtons.propTypes = {
   setCurrentPage: PropTypes.func.isRequired,
+  currentPage: PropTypes.string.isRequired,
 };
+
 export default TabButtons;

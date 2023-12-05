@@ -1,7 +1,9 @@
+// App.jsx
 import { useState, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
 import TaskForm from "./components/TaskForm";
 import PageContainer from "./components/PageContainer";
+import Footer from "./components/Footer";
 import "./App.css";
 
 function App() {
@@ -93,17 +95,21 @@ function App() {
             selectedPriority={selectedPriority}
             handleCheckboxChange={handleCheckboxChange}
             addTask={addTask}
+            setCurrentPage={setCurrentPage}
           />
         )}
-        <PageContainer
-          currentPage={currentPage}
-          tasks={tasks}
-          validatedTasks={validatedTasks}
-          deleteTask={deleteTask}
-          validateTask={validateTask}
-          setSelectedPriority={setSelectedPriority}
-          setCurrentPage={setCurrentPage}
-        />
+        {currentPage !== "form" && (
+          <PageContainer
+            currentPage={currentPage}
+            tasks={tasks}
+            validatedTasks={validatedTasks}
+            deleteTask={deleteTask}
+            validateTask={validateTask}
+            setSelectedPriority={setSelectedPriority}
+            setCurrentPage={setCurrentPage}
+          />
+        )}
+        <Footer />
       </main>
     </div>
   );

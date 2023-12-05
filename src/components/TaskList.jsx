@@ -51,7 +51,7 @@ TaskList.propTypes = {
   onDeleteTask: PropTypes.func.isRequired,
   filteredPriority: PropTypes.string,
   onValidateTask: PropTypes.func,
-  showValidateButton: PropTypes.bool, // Nouvelle prop pour contrôler l'affichage du bouton
+  showValidateButton: PropTypes.bool,
 };
 
 export default TaskList;

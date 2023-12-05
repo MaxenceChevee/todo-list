@@ -8,7 +8,7 @@ function CompletedTasksPage({
   validateTask,
 }) {
   return (
-    <div>
+    <>
       {currentPage === "taches accomplies" && (
         <TaskListPage
           tasks={validatedTasks}
@@ -25,7 +25,7 @@ function CompletedTasksPage({
           }}
         />
       )}
-    </div>
+    </>
   );
 }
 

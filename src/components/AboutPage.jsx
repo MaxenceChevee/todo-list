@@ -1,7 +1,7 @@
 const AboutPage = () => {
   return (
     <div className="about-page">
-      <h1 className="about-title">À propos de notre site</h1>
+      <h1 className="about-title">À propos du site</h1>
       <div className="about-text-container">
         <p>
           Bienvenue sur notre application de gestion des tâches ! Notre mission

@@ -15,6 +15,44 @@ body {
   background-position: center;
   overflow: hidden;
 }
+.dark-mode {
+  background-image: url("../src/assets/images/citrouille.png") !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: rgba(236, 175, 8, 0.87) !important;
+  transition: background-color 0.5s, color 0.5s;
+}
+.dark-mode button {
+  background-color: #cc5d0d9a !important;
+  color: #fff !important;
+}
+
+.dark-mode button:hover {
+  background-color: #584d4d !important;
+  color: #fff !important;
+}
+
+.dark-mode button:focus,
+.dark-mode button:focus-visible {
+  outline-color: #646cff !important;
+}
+.dark-mode .navbar {
+  background-color: #cc5d0d9a !important;
+}
+
+.dark-mode .footer {
+  background-color: #cc5d0d9a !important;
+}
+.dark-mode input,
+.dark-mode input[type="checkbox"] {
+  background-color: #cc5d0d9a !important;
+  color: #fff !important;
+}
+.dark-mode .form label {
+  background-color: #cc5d0d9a;
+}
+
 .task-card {
   display: flex;
   align-items: center;
@@ -24,7 +62,6 @@ body {
   margin: 1rem;
   height: auto;
   width: 100%;
-  border: 1px solid pink;
 }
 .task-content {
   flex-grow: 1;
@@ -90,11 +127,11 @@ body {
 
 button {
   background-color: #99000094 !important;
-  color: white !important;
-  border: none !important;
-  padding: 10px !important;
-  margin: 5px !important;
-  cursor: pointer !important;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin: 5px;
+  cursor: pointer;
 }
 
 button:hover {
@@ -120,32 +157,33 @@ button:hover {
 .button-container {
   display: flex;
   align-items: center;
+  height: 100%;
 }
 
 .button-add {
   width: 15rem;
 }
-.button-validate,
+
 .button-delete {
-  background-color: #05990094;
   color: white;
   cursor: pointer;
   width: 2rem;
   height: 2rem;
   margin-bottom: 0;
-}
-.button-delete {
   background-color: #99000094;
   border-radius: 0.4rem;
 }
-
+.button-validate {
+  background-color: #05990094 !important;
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+}
 .button-validate:hover,
 .button-delete:hover {
   background-color: #696969 !important;
 }
-.button-validate {
-  background-color: #05990094;
-}
+
 .task-item {
   background-color: #fff;
   border: 1px solid #ddd;
@@ -156,10 +194,6 @@ button:hover {
   justify-content: space-between;
   align-items: center;
   border: 1px solid white;
-}
-
-.checkbox {
-  margin-right: 10px;
 }
 
 .completed {
@@ -228,7 +262,7 @@ li {
 }
 
 .priority-pas-pressé {
-  color: green;
+  color: rgb(0, 128, 0);
 }
 ::-webkit-scrollbar {
   width: 12px;
@@ -261,7 +295,6 @@ li {
   display: none;
   width: 1px !important;
 }
-/* Ajoutez ces styles à votre fichier CSS */
 @keyframes santaAnimation {
   100% {
     transform: translateX(-100%);
@@ -285,7 +318,6 @@ li {
     center;
   background-size: contain;
 }
-/* Navbar.css */
 
 .navbar {
   background-color: #0000008a;
@@ -325,7 +357,7 @@ li {
 }
 .about-page {
   width: 50%;
-  height: 45%;
+  height: 50%;
   background-color: #000000de;
   border-radius: 0.4rem;
 }

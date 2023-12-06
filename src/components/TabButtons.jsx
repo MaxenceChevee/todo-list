@@ -18,7 +18,7 @@ function TabButtons({ setCurrentPage }) {
           </button>
         </li>
         <li>
-          <button onClick={() => setCurrentPage("pas pressé")}>
+          <button onClick={() => setCurrentPage("pas-pressé")}>
             Tâches Pas Pressées
           </button>
         </li>

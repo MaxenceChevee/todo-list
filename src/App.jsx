@@ -120,7 +120,11 @@ function App() {
             setCurrentPage={setCurrentPage}
           />
         )}
-        <div className="santa-container">
+        <div
+          className={`santa-container ${
+            darkMode ? "santa-halloween" : "santa-noel"
+          }`}
+        >
           <div className="santa"></div>
         </div>
         <Footer toggleDarkMode={toggleDarkMode} />

@@ -19,7 +19,7 @@ function TaskForm({
       <TabButtons setCurrentPage={setCurrentPage} />
       <div className="form">
         <div className="checkbox-container">
-          <label>
+          <label className="checkbox-item">
             Urgente
             <input
               type="checkbox"
@@ -41,9 +41,9 @@ function TaskForm({
             Pas Pressée
             <input
               type="checkbox"
-              value="pas pressé"
-              checked={selectedPriority === "pas pressé"}
-              onChange={() => handleCheckboxChange("pas pressé")}
+              value="pas-pressé"
+              checked={selectedPriority === "pas-pressé"}
+              onChange={() => handleCheckboxChange("pas-pressé")}
             />
           </label>
         </div>

@@ -8,6 +8,13 @@ import Footer from "./components/Footer";
 import "./App.css";
 
 function App() {
+  const [darkMode, setDarkMode] = useState(false);
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+    const htmlElement = document.querySelector("html");
+    htmlElement.classList.toggle("dark-mode", !darkMode);
+  };
+
   const [tasks, setTasks] = useState(() => {
     const storedTasks = JSON.parse(localStorage.getItem("tasks")) || [];
     const storedValidatedTasks =
@@ -89,7 +96,7 @@ function App() {
     setCurrentPage(page);
   };
   return (
-    <div className="App">
+    <div className={`app ${darkMode ? "dark-mode" : ""}`}>
       <main className="main">
         <Navbar handleNavbarClick={handleNavbarClick} />
         {currentPage === "form" && (
@@ -116,7 +123,7 @@ function App() {
         <div className="santa-container">
           <div className="santa"></div>
         </div>
-        <Footer />
+        <Footer toggleDarkMode={toggleDarkMode} />
       </main>
     </div>
   );

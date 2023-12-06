@@ -20,9 +20,9 @@ function TaskPage({ currentPage, tasks, deleteTask, validateTask }) {
           validateTask={validateTask}
         />
       )}
-      {currentPage === "pas pressé" && (
+      {currentPage === "pas-pressé" && (
         <TaskListPage
-          tasks={tasks.filter((task) => task.priority === "pas pressé")}
+          tasks={tasks.filter((task) => task.priority === "pas-pressé")}
           deleteTask={deleteTask}
           filteredPriority="pas pressé"
           validateTask={validateTask}

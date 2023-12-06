@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
 import TaskForm from "./components/TaskForm";
 import PageContainer from "./components/PageContainer";
+import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import "./App.css";
 
@@ -84,10 +85,13 @@ function App() {
       prevPriority === priority ? null : priority
     );
   };
-
+  const handleNavbarClick = (page) => {
+    setCurrentPage(page);
+  };
   return (
     <div className="App">
       <main className="main">
+        <Navbar handleNavbarClick={handleNavbarClick} />
         {currentPage === "form" && (
           <TaskForm
             taskInput={taskInput}

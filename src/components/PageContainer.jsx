@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import TabButtons from "./TabButtons";
 import TaskPage from "./TaskPage";
 import CompletedTasksPage from "./CompletedTasksPage";
+import AboutPage from "./AboutPage";
 
 function PageContainer({
   currentPage,
@@ -34,6 +35,7 @@ function PageContainer({
           deleteTask={deleteTask}
           validateTask={validateTask}
         />
+        {currentPage === "about" && <AboutPage />}
       </div>
     </div>
   );
